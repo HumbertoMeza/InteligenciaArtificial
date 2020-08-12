@@ -1,22 +1,26 @@
+import java.util.Scanner;
 
 public class fibonacci {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int Numerofib = 20;
+		Scanner leer = new Scanner(System.in);
+		System.out.println("Ingresa el numero de fibonacci que quieres");
+		
+		int numerofib = leer.nextInt();
 		int num1 = 0;
 		int num2 = 1;
 		int sumatoria = 0;
 		
 		
-		for(int j = 1; j<= Numerofib; j++) {
-			System.out.println(j +".- "+ num1);
+		for(int j = 1; j<= numerofib; j++) {
 			
 			sumatoria = num1 + num2;
 		
 			num1 = num2;
 			num2 = sumatoria;
 		}
+		System.out.println("Numero fibonacci #"+ numerofib + " "+ num1);
 	}
 
 }
